@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Beranda />} />
         <Route path="/ajukan" element={<Ajukan />} />
         <Route path="/panduan" element={<Panduan />} />
-        <Route path="/tentang" element={<Tentang />} />
+        {/* <Route path="/tentang" element={<Tentang />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
