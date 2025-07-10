@@ -168,7 +168,7 @@ const Beranda = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto px-4">
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
-                src="src/assets/img/Online consulting-amico.svg"
+                src="public\Online consulting-amico (1).png"
                 alt="Ilustrasi Layanan"
                 className="w-full max-w-md h-auto"
               />
