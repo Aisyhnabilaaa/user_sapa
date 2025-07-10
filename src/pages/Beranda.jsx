@@ -89,28 +89,36 @@ const Beranda = () => {
 
         {/* Visi Misi */}
         <div className="bg-purple-50 py-16 px-6">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-xl lg:text-3xl font-extrabold text-sky-800 drop-shadow mb-4">
-                VISI
-              </h2>
-              <p className="text-gray-700 text-xl">
-                Mewujudkan lingkungan yang aman, adil, dan berpihak kepada perempuan dan anak melalui edukasi, perlindungan, dan kolaborasi sosial.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-xl lg:text-3xl font-extrabold mb-4 text-sky-800 drop-shadow">
-                MISI
-              </h2>
-              <ul className="list-disc pl-6 space-y-3 text-gray-700 text-xl">
-                <li>Memberikan edukasi kepada masyarakat tentang kekerasan dan hak-hak perempuan dan anak.</li>
-                <li>Menyediakan ruang pelaporan dan pendampingan korban.</li>
-                <li>Mendorong keterlibatan aktif masyarakat dalam menciptakan perubahan.</li>
-                <li>Menguatkan solidaritas relawan dalam kerja-kerja sosial dan advokasi.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <div className="max-w-6xl mx-auto text-center mb-12">
+    <h1 className="text-3xl lg:text-4xl font-extrabold text-sky-800 drop-shadow">
+      Visi & Misi Relawan SAPA Balaroa
+    </h1>
+    <p className="text-gray-600 mt-2 text-lg">Komitmen kami dalam membangun lingkungan yang ramah perempuan dan anak</p>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 className="text-xl lg:text-3xl font-extrabold text-sky-800 drop-shadow mb-4">
+        VISI
+      </h2>
+      <p className="text-gray-700 text-xl">
+        Mewujudkan lingkungan yang aman, adil, dan berpihak kepada perempuan dan anak melalui edukasi, perlindungan, dan kolaborasi sosial.
+      </p>
+    </div>
+    <div>
+      <h2 className="text-xl lg:text-3xl font-extrabold mb-4 text-sky-800 drop-shadow">
+        MISI
+      </h2>
+      <ul className="list-disc pl-6 space-y-3 text-gray-700 text-xl">
+        <li>Memberikan edukasi kepada masyarakat tentang kekerasan dan hak-hak perempuan dan anak.</li>
+        <li>Menyediakan ruang pelaporan dan pendampingan korban.</li>
+        <li>Mendorong keterlibatan aktif masyarakat dalam menciptakan perubahan.</li>
+        <li>Menguatkan solidaritas relawan dalam kerja-kerja sosial dan advokasi.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
         {/* Peran Relawan */}
         {/* <div className="pt-12">
@@ -168,7 +176,7 @@ const Beranda = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto px-4">
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
-                src="public\Online consulting-amico (1).png"
+                src="public/Online consulting-amico (1).png"
                 alt="Ilustrasi Layanan"
                 className="w-full max-w-md h-auto"
               />
