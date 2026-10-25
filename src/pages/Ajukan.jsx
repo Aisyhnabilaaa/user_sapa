@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { API_URL } from "../config";
+
+const INITIAL_FORM = {
+  nama: "",
+  email: "",
+  jenisKelamin: "",
+  noTelepon: "",
+  kronologi: "",
+};
 
 const Ajukan = () => {
-  const [formData, setFormData] = useState({
-    nama: "",
-    email: "",
-    jenisKelamin: "",
-    noTelepon: "",
-    kronologi: "",
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM);
 
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState({ status: "", message: "" });
@@ -34,35 +37,26 @@ const Ajukan = () => {
     setFeedback({ status: "", message: "" });
 
     try {
-      const res = await fetch(
-        "https://backendsapa-production.up.railway.app/api/pengaduan/ajukan",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const res = await fetch(`${API_URL}/pengaduan/ajukan`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       const data = await res.json();
 
       if (res.ok) {
         setFeedback({ status: "success", message: "Pengaduan berhasil dikirim!" });
-        setFormData({
-          nama: "",
-          email: "",
-          jenisKelamin: "",
-          noTelepon: "",
-          kronologi: "",
-        });
+        setFormData(INITIAL_FORM);
       } else {
         setFeedback({ status: "error", message: data.message || "Gagal mengirim." });
       }
     } catch (error) {
       console.error("Error:", error);
       setFeedback({ status: "error", message: "Terjadi kesalahan server." });
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
@@ -126,7 +120,6 @@ const Ajukan = () => {
               value={formData.jenisKelamin}
               onChange={handleChange}
               className="pl-10 pr-3 py-2 border rounded-full w-full focus:outline-none focus:ring-2 focus:ring-pink-300 transition bg-white text-gray-700"
-              defaultValue=""
             >
               <option value="" disabled>
                 Jenis Kelamin
