@@ -177,17 +177,6 @@ const Ajukan = () => {
         </form>
       </div>
 
-      <style>
-        {`
-          .animate-fade-in-up {
-            animation: fadeInUp 1s;
-          }
-          @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px);}
-            to { opacity: 1; transform: translateY(0);}
-          }
-        `}
-      </style>
     </div>
   );
 };

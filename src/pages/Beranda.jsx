@@ -211,26 +211,6 @@ const Beranda = () => {
         </div>
 
       </div>
-
-      {/* Animasi */}
-      <style>
-        {`
-          .animate-fade-in-down {
-            animation: fadeInDown 1s;
-          }
-          .animate-fade-in-up {
-            animation: fadeInUp 1s;
-          }
-          @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-40px);}
-            to { opacity: 1; transform: translateY(0);}
-          }
-          @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px);}
-            to { opacity: 1; transform: translateY(0);}
-          }
-        `}
-      </style>
     </div>
   );
 };
