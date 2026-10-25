@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const Beranda = () => {
   return (
     <div className="beranda bg-gradient-to-b from-white via-pink-50 to-blue-100 min-h-screen">
@@ -55,34 +53,22 @@ const Beranda = () => {
         <div className="mt-10 mb-20">
           <div className="max-w-5xl mx-auto px-4">
             <div className="grid grid-cols-1 gap-8 pt-12">
-              {[
-                {
-                  title: "Relawan SAPA (Sahabat Perempuan dan Anak)?",
-                  desc: (
-                    <>
-                      <p className="mb-4">
-                        Relawan SAPA (Sahabat Perempuan dan Anak) adalah individu yang secara sukarela menyatakan kesediaannya untuk:
-                      </p>
-                      <ul className="list-disc list-inside space-y-2">
-                        <li>Berperan aktif dalam mencegah kekerasan terhadap perempuan dan anak</li>
-                        <li>Memberikan edukasi kepada masyarakat, terutama tentang pola asuh yang baik dan perlindungan anak</li>
-                        <li>Mendukung terciptanya lingkungan yang ramah, aman, dan peduli terhadap perempuan dan anak di tingkat kelurahan atau desa</li>
-                      </ul>
-                      <p className="mt-4">
-                        Mereka bukan hanya menjadi pelapor, tapi juga menjadi penggerak perubahan sosial di komunitasnya.
-                      </p>
-                    </>
-                  ),
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-sky-200 via-pink-100 to-yellow-100 rounded-2xl shadow-xl p-10 border border-sky-100"
-                >
-                  <h3 className="text-3xl font-bold text-sky-800 text-center mb-6">{item.title}</h3>
-                  <div className="text-gray-700 text-base text-justify">{item.desc}</div>
+              <div className="bg-gradient-to-br from-sky-200 via-pink-100 to-yellow-100 rounded-2xl shadow-xl p-10 border border-sky-100">
+                <h3 className="text-3xl font-bold text-sky-800 text-center mb-6">Relawan SAPA (Sahabat Perempuan dan Anak)?</h3>
+                <div className="text-gray-700 text-base text-justify">
+                  <p className="mb-4">
+                    Relawan SAPA (Sahabat Perempuan dan Anak) adalah individu yang secara sukarela menyatakan kesediaannya untuk:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li>Berperan aktif dalam mencegah kekerasan terhadap perempuan dan anak</li>
+                    <li>Memberikan edukasi kepada masyarakat, terutama tentang pola asuh yang baik dan perlindungan anak</li>
+                    <li>Mendukung terciptanya lingkungan yang ramah, aman, dan peduli terhadap perempuan dan anak di tingkat kelurahan atau desa</li>
+                  </ul>
+                  <p className="mt-4">
+                    Mereka bukan hanya menjadi pelapor, tapi juga menjadi penggerak perubahan sosial di komunitasnya.
+                  </p>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -120,56 +106,6 @@ const Beranda = () => {
 </div>
 
 
-        {/* Peran Relawan */}
-        {/* <div className="pt-12">
-          <h1 className="text-center text-4xl lg:text-5xl font-extrabold mb-10 text-sky-800 drop-shadow">
-            Peran Relawan SAPA
-          </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4">
-            {[
-              {
-                title: "Edukator",
-                items: [
-                  "Membantu membuat konten edukasi (infografis, artikel, video)",
-                  "Menjadi pemateri dalam sosialisasi atau workshop ke sekolah/masyarakat",
-                ],
-              },
-              {
-                title: "Pendamping Lapangan",
-                items: [
-                  "Terlibat dalam kegiatan langsung seperti aksi kampanye, forum, atau kegiatan ke masyarakat",
-                ],
-              },
-              {
-                title: "Koordinator Kegiatan",
-                items: [
-                  "Membantu mengatur agenda kegiatan",
-                  "Berkoordinasi dengan mitra atau komunitas",
-                ],
-              },
-              {
-                title: "Media & Publikasi",
-                items: [
-                  "Membantu membuat konten sosial media",
-                  "Mengelola akun IG/FB/Site SAPA",
-                  "Dokumentasi kegiatan",
-                ],
-              },
-            ].map((role, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-sky-200 via-pink-100 to-yellow-100 rounded-2xl shadow-xl p-6 border border-sky-100"
-              >
-                <h3 className="text-xl font-bold text-sky-800 mb-4 text-center">{role.title}</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  {role.items.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div> */}
 
         {/* Alur Pengaduan */}
         <div className="pt-20 pb-10 animate-fade-in-up">
@@ -211,26 +147,6 @@ const Beranda = () => {
         </div>
 
       </div>
-
-      {/* Animasi */}
-      <style>
-        {`
-          .animate-fade-in-down {
-            animation: fadeInDown 1s;
-          }
-          .animate-fade-in-up {
-            animation: fadeInUp 1s;
-          }
-          @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-40px);}
-            to { opacity: 1; transform: translateY(0);}
-          }
-          @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px);}
-            to { opacity: 1; transform: translateY(0);}
-          }
-        `}
-      </style>
     </div>
   );
 };
